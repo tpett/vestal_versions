@@ -30,7 +30,7 @@ class VersionTest < Test::Unit::TestCase
     end
 
     should 'default to ordering by number when finding through association' do
-      order = @user.versions.send(:scope, :find)[:order]
+      order = @user.versions.scoped.order_values.join
       assert_equal 'versions.number ASC', order
     end
 
