@@ -1,3 +1,4 @@
+# Rails 2 generator
 class VestalVersionsGenerator < Rails::Generator::Base
   def manifest
     record do |m|
